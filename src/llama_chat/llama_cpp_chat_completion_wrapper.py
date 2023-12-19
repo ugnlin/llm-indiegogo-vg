@@ -1,3 +1,4 @@
+# credits to https://github.com/viniciusarruda/llama-cpp-chat-completion-wrapper/
 from llama_cpp import Llama
 from functools import partial
 from typing import List, Literal, TypedDict, Callable
