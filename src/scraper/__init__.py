@@ -8,8 +8,6 @@ import cfscrape
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from fake_useragent import FakeUserAgent
-
 
 from ..common.project import Project
 
