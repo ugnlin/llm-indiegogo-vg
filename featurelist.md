@@ -1,0 +1,93 @@
+## Title
+- Title length (words)
+- Title length (chars)
+- Is the title snappy?
+- Does the title include a tagline?
+
+## Categories
+- Project Type:
+- [Game Software
+- Game Hardware
+- Physical Game
+- Event
+- Other]
+- Game Genre: 
+- [Action-adventure
+- Board Game
+- Adventure
+- Card Game
+- Gacha Game
+- Horror
+- Puzzle
+- Role-playing
+- Simulation
+- Strategy
+- Sports
+- Survival
+- MMO
+- Non-Game
+- Adult
+- VR]
+- Game platforms
+- [PC
+- Playstation
+- Xbox
+- Switch
+- Mobile
+- Other]
+- Number of game platforms
+- Game Theme
+- [Fantasy
+- Sci-fi
+- Horror
+- Retro
+- Anime
+- Adult
+- ]
+- Singleplayer?
+- Multiplayer?
+- Solo developer?
+
+## Campaign date
+- Project launched during holiday?
+- Length of Campaign
+- Season project was launched
+- Day of month project was launched
+- Day of month project was ended
+
+## Financials
+- Is this charity?
+- Cost per unit
+- Goal in USD
+- Raised % (Target metric)
+
+## Description and FAQs
+- Number of grammatical errors
+- Length of description (words)
+- Description writing... 
+- [Unclear
+- Repetitive
+- Inconsistent
+- Passive
+- Wordy
+- Formal
+- Professional
+- Confusing
+- Focused
+- Overly Complex
+- Detailed
+- Overly detailed]
+- Number of Questions
+- Does the game sound innovative?
+- Is there a lot of detail about the gameplay?
+- Is it likely it was written by a non-native English speaker?
+- Game Minimum Age Recommendation
+- Does game include sexual content?
+- Weeb pandering?
+- Waifu bait?
+- Pre-production?
+- Playable Demo?
+- Social Media?
+- Community?
+- Does it mention budget and financial planning?
+- Are there extra physical perks mentioned for pledging?
