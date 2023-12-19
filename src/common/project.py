@@ -1,13 +1,16 @@
 from dataclasses import dataclass
 
-from . import mlfeatures
-from . import rawfeatures
+from .mlfeatures import EngineeredFeatures
+from .rawfeatures import RawFeatures
 
 
 @dataclass
 class Project:
     # features go here
-    raw: rawfeatures.RawFeatures
-    features: mlfeatures.EngineeredFeatures
+    raw: RawFeatures
+    features: EngineeredFeatures | None = None
 
+    @classmethod
+    def create(cls, **kwargs):
+        return cls(raw=RawFeatures.create(**kwargs))
 

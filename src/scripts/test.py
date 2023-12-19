@@ -1,8 +1,13 @@
+from src.scraper import IGGScraper
+from dataclasses import asdict
+
 import pandas as pd
 
-a = pd.DataFrame(columns = ['a', 'b'])
-a = pd.concat([a, pd.Series({'a':1 , 'b': 2}).to_frame().T])
-a = pd.concat([a, pd.Series({'a':1 , 'b': 23}).to_frame().T])
+scraper = IGGScraper()
+projects = scraper.fetch_projects()
 
+raw_features_list = [asdict(project.raw) for project in projects]
 
-print(a)
+df = pd.DataFrame(raw_features_list)
+df.to_csv('./data/scraped.csv')
+
