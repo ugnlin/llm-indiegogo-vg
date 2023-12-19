@@ -85,4 +85,7 @@ class Category:
         if formatted_res[-1] != '}':
             formatted_res += '}'
 
+        if formatted_res[-2] == ',':
+            formatted_res = formatted_res.rstrip(',')
+
         self.value.update(json.loads(formatted_res))
