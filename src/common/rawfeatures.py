@@ -12,6 +12,7 @@ class RawFeatures:
     close_date: datetime
     goal: float
     raised: float
+    currency: str
 
     @classmethod
     def create(cls, **kwargs):

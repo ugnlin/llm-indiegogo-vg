@@ -77,7 +77,7 @@ class IGGScraper:
 
     def fetch_projects(self,
                        start_page: int = 1,
-                       end_page: int = 300
+                       end_page: int = 999
                        ) -> list[Project]:
 
         projects = []
@@ -141,12 +141,13 @@ class IGGScraper:
 
         project = Project.create(
             project_id = project_id,
+            currency = project_metadata['currency'],
             name = project_metadata['title'],
             description = project_desc,
             faqs = faq_pairs,
             open_date = project_metadata['open_date'],
             close_date = project_metadata['close_date'],
-            raised_percent = project_metadata['funds_raised_percent'],  # todo bruh currency conversion lol,
+            raised_percent = project_metadata['funds_raised_percent'], 
             raised = project_metadata['funds_raised_amount']
         )
         print(project.raw.name)
