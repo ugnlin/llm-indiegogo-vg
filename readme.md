@@ -1,4 +1,4 @@
-# Kickstarter Game LLM Scraper Predictor
+# Indiegogo Game LLM Scraper Predictor
 
 quick little project to try the following things:
 - Scrape games off of kickstarter
