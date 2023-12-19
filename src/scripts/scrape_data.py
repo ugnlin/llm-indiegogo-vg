@@ -4,10 +4,10 @@ from dataclasses import asdict
 import pandas as pd
 
 scraper = IGGScraper()
-projects = scraper.fetch_projects(start_page=279)
+projects = scraper.fetch_projects()
 
 raw_features_list = [asdict(project.raw) for project in projects]
 
 df = pd.DataFrame(raw_features_list)
-df.to_csv('./data/scraped.csv')
+df.to_csv('./data/scraped/scraped1.csv')
 
