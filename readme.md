@@ -11,6 +11,8 @@ I'm just looking to do a technical project here. The domain is for fun, to keep 
 expecting it just to be for personal gain!
 
 
+Requires a gguf file pointed at in the .env
+
 To-improve list
 - Scrape number of pictures in description since some projects like making tons of graphics and putting info in those 
 and not writing a description
