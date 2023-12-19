@@ -2,7 +2,7 @@ from datetime import datetime
 from dataclasses import dataclass
 
 @dataclass
-class RawFeatures:
+class RawData:
     project_id: int
     name: str
     description: str
