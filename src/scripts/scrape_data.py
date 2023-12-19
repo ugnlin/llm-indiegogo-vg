@@ -4,7 +4,7 @@ from dataclasses import asdict
 import pandas as pd
 
 scraper = IGGScraper()
-projects = scraper.fetch_projects()
+projects = scraper.fetch_projects(start_page=279)
 
 raw_features_list = [asdict(project.raw) for project in projects]
 
