@@ -89,7 +89,8 @@ class IGGScraper:
             for project_metadata in project_metadata_list:
                 project = self._get_project(project_metadata)
 
-                projects.append(project)
+                if project:
+                    projects.append(project)
 
             raw_features_list = [asdict(project.raw) for project in projects]
 
@@ -121,7 +122,7 @@ class IGGScraper:
 
         return [item for item in page_content["data"]["discoverables"]]
 
-    def _get_project(self, project_metadata: dict) -> Project:
+    def _get_project(self, project_metadata: dict) -> Project | None:
         self._wait()
 
         res = requests.get(self.base_url + project_metadata['clickthrough_url'], headers=self.get_headers)
@@ -139,19 +140,24 @@ class IGGScraper:
                                      ).content)
         faq_pairs = [f"Question: {faq['question']} - Answer: {faq['answer']}" for faq in project_faqs_raw['data']['project']['faqs']]
 
-        project = Project.create(
-            project_id = project_id,
-            currency = project_metadata['currency'],
-            name = project_metadata['title'],
-            description = project_desc,
-            faqs = faq_pairs,
-            open_date = project_metadata['open_date'],
-            close_date = project_metadata['close_date'],
-            raised_percent = project_metadata['funds_raised_percent'], 
-            raised = project_metadata['funds_raised_amount']
-        )
-        print(project.raw.name)
+        try:
+            project = Project.create(
+                project_id = project_id,
+                currency = project_metadata['currency'],
+                name = project_metadata['title'],
+                description = project_desc,
+                faqs = faq_pairs,
+                open_date = project_metadata['open_date'],
+                close_date = project_metadata['close_date'],
+                raised_percent = project_metadata['funds_raised_percent'],
+                raised = project_metadata['funds_raised_amount']
+            )
+            print(project.raw.name)
+            return project
 
-        return project
+        except RuntimeError:
+            return None # some sort of unhandled data error - rare
+
+
 
 
