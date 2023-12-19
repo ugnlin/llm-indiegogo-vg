@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from .mlfeatures import EngineeredFeatures
+from ..feature import EngineeredFeatures
 from .rawfeatures import RawFeatures
 
 
